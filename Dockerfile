@@ -8,10 +8,10 @@ RUN apt-get update \
 
 # 下载文件
 WORKDIR /var/lib/openssl
-RUN wget --no-check-certificate https://codeload.github.com/openssl/openssl/tar.gz/OpenSSL_1_1_1-pre9 \
-&& tar -zxvf OpenSSL_1_1_1-pre9  \
-&& mv openssl-OpenSSL_1_1_1-pre9 openssl \
-&& rm -rf OpenSSL_1_1_1-pre9
+RUN wget --no-check-certificate https://codeload.github.com/openssl/openssl/tar.gz/OpenSSL_1_1_1 \
+&& tar -zxvf OpenSSL_1_1_1  \
+&& mv openssl-OpenSSL_1_1_1 openssl \
+&& rm -rf OpenSSL_1_1_1
 
 RUN cd /var/lib/openssl/openssl \
 && ./config \
